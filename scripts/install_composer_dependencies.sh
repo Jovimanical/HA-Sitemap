@@ -18,10 +18,31 @@ sudo \cp -rf apacheconfigs/ports.conf /etc/apache2/ports.conf
 curl -sS https://getcomposer.org/installer | php
 php composer.phar install
 
-sudo wget http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/multiarch-support_2.27-3ubuntu1.5_amd64.deb
-sudo apt-get install ./multiarch-support_2.27-3ubuntu1.5_amd64.deb
-sudo curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
-sudo apt-get update -y --allow-unauthenticated --allow-insecure-repositories && sudo ACCEPT_EULA=Y apt-get install -yq libodbc1 unixodbc msodbcsql18 mssql-tools18 unixodbc-dev  --allow-unauthenticated
+if ! [[ "18.04 20.04 21.04" == "$(lsb_release -rs)" ]];
+then
+    echo "Ubuntu $(lsb_release -rs) is not currently supported.";
+    #exit;
+fi
+
+sudo curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+sudo curl https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/prod.list > /etc/apt/sources.list.d/mssql-release.list
+
+#sudo wget http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/multiarch-support_2.27-3ubuntu1.5_amd64.deb
+#sudo apt-get install ./multiarch-support_2.27-3ubuntu1.5_amd64.deb
+#sudo curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+#sudo apt-get update -y --allow-unauthenticated --allow-insecure-repositories && sudo ACCEPT_EULA=Y apt-get install -yq libodbc1 unixodbc msodbcsql18 mssql-tools18 unixodbc-dev  --allow-unauthenticated
+
+exit
+sudo apt-get update
+sudo ACCEPT_EULA=Y apt-get install -y msodbcsql18
+# optional: for bcp and sqlcmd
+sudo ACCEPT_EULA=Y apt-get install -y mssql-tools18
+echo 'export PATH="$PATH:/opt/mssql-tools18/bin"' >> ~/.bashrc
+source ~/.bashrc
+# optional: for unixODBC development headers
+sudo apt-get install -y unixodbc-dev
+
+
 
 sudo chown -R www-data:www-data /var/www/html
 sudo chmod -R 0777 /var/www/html
