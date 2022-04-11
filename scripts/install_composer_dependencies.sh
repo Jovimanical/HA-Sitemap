@@ -21,10 +21,10 @@ php composer.phar install
 sudo wget http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/multiarch-support_2.27-3ubuntu1.5_amd64.deb
 sudo apt-get install ./multiarch-support_2.27-3ubuntu1.5_amd64.deb
 sudo curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
-sudo apt-get update -yq --allow-unauthenticated --allow-insecure-repositories && ACCEPT_EULA=Y apt-get install -yq libodbc1 unixodbc msodbcsql17 mssql-tools unixodbc-dev  --allow-unauthenticated
+sudo apt-get update -y --allow-unauthenticated --allow-insecure-repositories && sudo ACCEPT_EULA=Y apt-get install -yq libodbc1 unixodbc msodbcsql17 mssql-tools unixodbc-dev  --allow-unauthenticated
 
-sudo chown -R www-data:www-data /var/www/html
-sudo chmod -R 0777 /var/www/html/
+sudo chown -R www-data:www-data /var/www/html && chmod -R g+rw /var/www/html
+sudo chmod -R 0777 /var/www/html
 
 sudo systemctl reload apache2
 
