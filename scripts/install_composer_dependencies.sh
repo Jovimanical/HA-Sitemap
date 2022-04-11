@@ -18,16 +18,17 @@ sudo \cp -rf apacheconfigs/ports.conf /etc/apache2/ports.conf
 curl -sS https://getcomposer.org/installer | php
 php composer.phar install
 
-sudo wget http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/multiarch-support_2.27-3ubuntu1.4_amd64.deb
-sudo apt-get install ./multiarch-support_2.27-3ubuntu1.4_amd64.deb
-sudo curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+sudo wget http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/multiarch-support_2.27-3ubuntu1.5_amd64.deb
+sudo apt-get install ./multiarch-support_2.27-3ubuntu1.5_amd64.deb
+sudo curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
 sudo apt-get update -yq --allow-unauthenticated --allow-insecure-repositories && ACCEPT_EULA=Y apt-get install -yq libodbc1 unixodbc msodbcsql17 mssql-tools unixodbc-dev  --allow-unauthenticated
-
-
-sudo systemctl reload apache2
 
 sudo chown -R www-data:www-data /var/www/html
 sudo chmod -R 0777 /var/www/html/
+
+sudo systemctl reload apache2
+
+
 # Add cronJobs to Service
 #These are piped through the sort command to remove duplicate lines.
 #but we can achieve a less destructive de-duplication with awk:
