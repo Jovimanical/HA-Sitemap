@@ -5,8 +5,13 @@ sudo chmod -R 0777 /var/www/html/kubo-core
 cd ~
 curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
 sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
-sudo mkdir /var/www/html/kubo-core/logs
-sudo chmod 755 /var/www/html/kubo-core/logs
+
+  if ! [ -d /var/www/html/kubo-core/logs ]; then
+        sudo mkdir /var/www/html/kubo-core/logs
+        sudo chmod 755 /var/www/html/kubo-core/logs
+        echo "Created kubo-core logs"
+  fi
+
 
 cd /var/www/html/kubo-core
 

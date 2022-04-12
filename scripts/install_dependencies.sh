@@ -61,8 +61,8 @@ else
   #sudo apt-get update -y
   #sudo apt-get install -y php7.4-gmp openssl
 
-  if [ -d /var/www/html ]; then
-    sudo rm -rf /var/www/html/*
+  if [ -d /var/www/html/kubo-core ]; then
+    #sudo rm -rf /var/www/html/*
     echo "System Directory Cleared"
   fi
 fi # install apache if not already installed
