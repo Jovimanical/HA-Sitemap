@@ -7,8 +7,6 @@ curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
 sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
 cd /var/www/html/kubo-core
-sudo mkdir /logs
-sudo chmod 755 /logs
 
 sudo \cp -rf apacheconfigs/vhost.conf /etc/apache2/sites-enabled/000-default.conf
 sudo \cp -rf apacheconfigs/apache2.conf /etc/apache2/apache2.conf
