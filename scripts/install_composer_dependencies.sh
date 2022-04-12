@@ -47,4 +47,4 @@ php composer.phar install
 sudo chown -R www-data:www-data /var/www/html
 sudo chmod -R 0777 /var/www/html
 
-sudo systemctl reload apache2
+sudo systemctl restart apache2
