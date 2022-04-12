@@ -1,8 +1,8 @@
 {
 	"env":"dev",
 	"config-dir":{
-		"database-config":"/var/html/www/kubo-core/configs/confs/database-config.json",
-		"public-endpoints":"/var/html/www/kubo-core/configs/public-endpoints.json",
+		"database-config":"./configs/confs/database-config.json",
+		"public-endpoints":"./configs/public-endpoints.json",
 		"whitelists":""
 	},
 	"session-location": "",

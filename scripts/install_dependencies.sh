@@ -58,9 +58,6 @@ else
   # previous deployments. The servers auto scale so the directory may or may not
   # exist.
   echo "System Checking Directories Exits"
-  #sudo apt-get update -y
-  #sudo apt-get install -y php7.4-gmp openssl
-
   if [ -d /var/www/html/kubo-core ]; then
     sudo rm -rf /var/www/html/kubo-core/*
     echo "System Directory Cleared"
