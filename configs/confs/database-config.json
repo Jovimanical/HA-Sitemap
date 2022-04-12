@@ -1,0 +1,8 @@
+{
+  "adapter": "SQLServer",
+  "server": "sytemap-test.cn9mopgi7fxg.us-west-2.rds.amazonaws.com,1433",
+  "database": "kubo-db",
+  "username": "appUser",
+  "password": "?%8nt7a@x4U-6jGBvNQT%",
+  "showError": true
+}
