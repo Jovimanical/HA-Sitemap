@@ -24,8 +24,7 @@ php composer.phar install
 
 
 sudo apt-get install tdsodbc -y
-sudo curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-sudo curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
+sudo curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add - && sudo curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
 #sudo wget https://packages.microsoft.com/config/ubuntu/19.10/prod.list
 #sudo mv prod.list /etc/apt/sources.list.d/mssql-release.list
 #sudo apt-get update
