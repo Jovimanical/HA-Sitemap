@@ -18,14 +18,15 @@ if ! [ -x "$(command -v apache2)" ]; then
   # Adjust Firewall
   sudo ufw allow in "Apache Full"
 
-  sudo apt -y install wget unzip openssl git curl g++ make unixodbc-dev zip  && rm -rf /var/lib/apt/lists/*
+  sudo apt -y install wget unzip openssl git curl g++ make unixodbc-dev zip && rm -rf /var/lib/apt/lists/*
   # Install PHP
   sudo apt install -y php7.4 php7.4-zip php7.4-dev php-pear libapache2-mod-php7.4 php7.4-gmp php7.4-mysql php7.4-gd php7.4-xml php7.4-soap php7.4-mbstring php7.4-mysql php7.4-redis php7.4-curl php7.4-cli php7.4-zip php7.4-yaml php7.4-common php7.4-bcmath php7.4-json
 
   sudo pecl install sqlsrv && sudo pecl install pdo_sqlsrv
-  sudo printf "; priority=20\nextension=sqlsrv.so\n" > /etc/php/7.4/mods-available/sqlsrv.ini
-  sudo printf "; priority=30\nextension=pdo_sqlsrv.so\n" > /etc/php/7.4/mods-available/pdo_sqlsrv.ini
-
+  sudo su
+  printf "; priority=20\nextension=sqlsrv.so\n" >/etc/php/7.4/mods-available/sqlsrv.ini
+  printf "; priority=30\nextension=pdo_sqlsrv.so\n" >/etc/php/7.4/mods-available/pdo_sqlsrv.ini
+  exit
 
   sudo phpenmod -v 7.4 sqlsrv pdo_sqlsrv curl simplexml
   echo "Server installed PHP"
@@ -34,10 +35,7 @@ if ! [ -x "$(command -v apache2)" ]; then
   sudo a2enmod rewrite
   sudo a2enmod php7.4
 
-
   echo "PHP Activated and restarting Apache2"
-  # Restart Apache Web Server
-  sudo systemctl restart apache2
 
   echo "Download and Configure MSSQL Server"
   sudo wget http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/multiarch-support_2.27-3ubuntu1.5_amd64.deb
@@ -47,25 +45,28 @@ if ! [ -x "$(command -v apache2)" ]; then
   sudo apt-get install tdsodbc -y
   sudo curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
   sudo curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
-  sudo curl https://packages.microsoft.com/config/ubuntu/19.10/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
-
+  sudo wget https://packages.microsoft.com/config/ubuntu/19.10/prod.list
+  sudo mv prod.list /etc/apt/sources.list.d/mssql-release.list
   echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
 
-  sudo apt-get update -yq --allow-unauthenticated --allow-insecure-repositories && sudo ACCEPT_EULA=Y apt-get install -yq libodbc1 unixodbc mssql-tools unixodbc-dev  --allow-unauthenticated
+  sudo apt-get update -yq --allow-unauthenticated --allow-insecure-repositories && sudo ACCEPT_EULA=Y apt-get install -yq libodbc1 unixodbc mssql-tools unixodbc-dev --allow-unauthenticated
 
-  echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
-  echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+  echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >>~/.bash_profile
+  echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >>~/.bashrc
   source ~/.bashrc
   source ~/.bash_profile
 
+  # Restart Apache Web Server
+  #sudo systemctl restart apache2
+  sudo service apache2 restart
   # I want to make sure that the directory is clean and has nothing left over from
   # previous deployments. The servers auto scale so the directory may or may not
   # exist.
   echo "Directories and permission"
   echo "System Checking Directories Exits"
   if [ -d /var/www/html ]; then
-      sudo rm -rf /var/www/html/*
-      echo "System Directory Cleared"
+    sudo rm -rf /var/www/html/*
+    echo "System Directory Cleared"
   fi
 
   # Allow Read/Write for Owner and App to write
