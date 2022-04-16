@@ -24,12 +24,12 @@ if ! [ -x "$(command -v apache2)" ]; then
 
   sudo pecl install sqlsrv && sudo pecl install pdo_sqlsrv
 
-  #  sudo su -p root
-  #  printf "; priority=20\nextension=sqlsrv.so\n" >/etc/php/7.4/mods-available/sqlsrv.ini
-  #  printf "; priority=30\nextension=pdo_sqlsrv.so\n" >/etc/php/7.4/mods-available/pdo_sqlsrv.ini
-  #  exit
+  sudo su
   printf "; priority=20\nextension=sqlsrv.so\n" >/etc/php/7.4/mods-available/sqlsrv.ini
   printf "; priority=30\nextension=pdo_sqlsrv.so\n" >/etc/php/7.4/mods-available/pdo_sqlsrv.ini
+  exit
+  #  printf "; priority=20\nextension=sqlsrv.so\n" >/etc/php/7.4/mods-available/sqlsrv.ini
+  #  printf "; priority=30\nextension=pdo_sqlsrv.so\n" >/etc/php/7.4/mods-available/pdo_sqlsrv.ini
 
   sudo phpenmod -v 7.4 sqlsrv pdo_sqlsrv curl simplexml
   echo "Server installed PHP"
