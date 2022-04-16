@@ -18,19 +18,18 @@ if ! [ -x "$(command -v apache2)" ]; then
   # Adjust Firewall
   sudo ufw allow in "Apache Full"
 
-  sudo apt -y install wget unzip openssl git curl g++ make unixodbc-dev zip && rm -rf /var/lib/apt/lists/*
+  sudo apt -y install wget unzip openssl git curl g++ make unixodbc-dev zip && sudo rm -rf /var/lib/apt/lists/*
   # Install PHP
   sudo apt install -y php7.4 php7.4-zip php7.4-dev php-pear libapache2-mod-php7.4 php7.4-gmp php7.4-mysql php7.4-gd php7.4-xml php7.4-soap php7.4-mbstring php7.4-mysql php7.4-redis php7.4-curl php7.4-cli php7.4-zip php7.4-yaml php7.4-common php7.4-bcmath php7.4-json
 
   sudo pecl install sqlsrv && sudo pecl install pdo_sqlsrv
 
-#  sudo su -p root
-#  printf "; priority=20\nextension=sqlsrv.so\n" >/etc/php/7.4/mods-available/sqlsrv.ini
-#  printf "; priority=30\nextension=pdo_sqlsrv.so\n" >/etc/php/7.4/mods-available/pdo_sqlsrv.ini
-#  exit
-
-  sudo echo "extension=sqlsrv.so" >/etc/php/7.4/mods-available/sqlsrv.ini
-  sudo echo "extension=pdo_sqlsrv.so" >/etc/php/7.4/mods-available/pdo_sqlsrv.ini
+  #  sudo su -p root
+  #  printf "; priority=20\nextension=sqlsrv.so\n" >/etc/php/7.4/mods-available/sqlsrv.ini
+  #  printf "; priority=30\nextension=pdo_sqlsrv.so\n" >/etc/php/7.4/mods-available/pdo_sqlsrv.ini
+  #  exit
+  printf "; priority=20\nextension=sqlsrv.so\n" >/etc/php/7.4/mods-available/sqlsrv.ini
+  printf "; priority=30\nextension=pdo_sqlsrv.so\n" >/etc/php/7.4/mods-available/pdo_sqlsrv.ini
 
   sudo phpenmod -v 7.4 sqlsrv pdo_sqlsrv curl simplexml
   echo "Server installed PHP"
