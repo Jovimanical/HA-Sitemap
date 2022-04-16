@@ -3,8 +3,8 @@ sudo chown -R ubuntu /var/www/html/kubo-core
 sudo chmod -R 0777 /var/www/html/kubo-core
 
 cd ~
-curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
-sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
+#curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
+#sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
   if ! [ -d /var/www/html/kubo-core/logs ]; then
         sudo mkdir /var/www/html/kubo-core/logs
