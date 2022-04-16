@@ -28,9 +28,8 @@ if ! [ -x "$(command -v apache2)" ]; then
   printf "; priority=20\nextension=sqlsrv.so\n" > /etc/php/7.4/mods-available/sqlsrv.ini
   printf "; priority=30\nextension=pdo_sqlsrv.so\n" > /etc/php/7.4/mods-available/pdo_sqlsrv.ini
   exit
-  sudo phpenmod -v 8.1 sqlsrv pdo_sqlsrv
-  sudo phpenmod -v 7.4 sqlsrv pdo_sqlsrv curl simplexml
 
+  sudo phpenmod -v 7.4 sqlsrv pdo_sqlsrv curl simplexml
   echo "Server installed PHP"
   sudo su
   #a2dismod mpm_event

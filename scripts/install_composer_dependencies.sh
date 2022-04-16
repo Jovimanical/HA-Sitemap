@@ -22,7 +22,7 @@ sudo \cp -rf apacheconfigs/ports.conf /etc/apache2/ports.conf
 
 
 curl -sS https://getcomposer.org/installer | php
-php composer.phar install
+sudo php composer.phar install
 
 sudo chown -R www-data:www-data /var/www/html
 sudo chmod -R 0777 /var/www/html
