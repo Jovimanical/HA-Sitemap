@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/houseafrica/kubo-plugins.git",
-                "reference": "2a6aa4230c2aacf37ef6c7aa125505c274020b76"
+                "reference": "55891c05769334774aa11a32c2f73d6ccbc63d9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/houseafrica/kubo-plugins/zipball/2a6aa4230c2aacf37ef6c7aa125505c274020b76",
-                "reference": "2a6aa4230c2aacf37ef6c7aa125505c274020b76",
+                "url": "https://api.github.com/repos/houseafrica/kubo-plugins/zipball/55891c05769334774aa11a32c2f73d6ccbc63d9c",
+                "reference": "55891c05769334774aa11a32c2f73d6ccbc63d9c",
                 "shasum": ""
             },
             "default-branch": true,
@@ -37,7 +37,7 @@
                 "source": "https://github.com/houseafrica/kubo-plugins/tree/master",
                 "issues": "https://github.com/houseafrica/kubo-plugins/issues"
             },
-            "time": "2022-04-12T17:59:45+00:00"
+            "time": "2022-04-15T10:16:03+00:00"
         },
         {
             "name": "nikic/fast-route",
@@ -598,5 +598,5 @@
     "platform-overrides": {
         "php": "7.2.0"
     },
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
