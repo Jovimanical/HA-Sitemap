@@ -49,3 +49,7 @@ Refactored bundled scripts
   MINOR Fix scripts for install_dependencies
 - [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
   MAJOR Fix for MSSQL Server connection error
+
+  ### Added
+- [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
+  Added .dist/trigger.txt file to assist with deployment trigger.
