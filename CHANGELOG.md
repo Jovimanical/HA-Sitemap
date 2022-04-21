@@ -97,3 +97,8 @@ Refactored bundled scripts
 
 - [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
   Changed the code to use slim framework header and instantiated app variable considering slim 3 and removed composer vendor link for checkAuthorization method to verify returned headers.
+
+  ### Fixed
+
+- [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
+  Fixed the code for checkAuthorization method to verify returned headers.
