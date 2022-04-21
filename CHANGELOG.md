@@ -78,3 +78,8 @@ Refactored bundled scripts
 - [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
   Changed the code to use slim framework header and added global app variable tools for checkAuthorization method to verify returned headers.
 
+### Changed
+
+- [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
+  Changed the code to use slim framework header and instantiated app variable tools for checkAuthorization method to verify returned headers.
+
