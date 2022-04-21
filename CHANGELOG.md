@@ -53,3 +53,9 @@ Refactored bundled scripts
   ### Added
 - [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
   Added .dist/trigger.txt file to assist with deployment trigger.
+
+  ### Changed
+
+- [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
+  Changed checkAuthorization method to verify returned headers and removed .dist/trigger.txt file
+  
