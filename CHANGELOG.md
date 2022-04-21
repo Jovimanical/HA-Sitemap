@@ -58,4 +58,9 @@ Refactored bundled scripts
 
 - [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
   Changed checkAuthorization method to verify returned headers and removed .dist/trigger.txt file
-  
+
+   ### Fixed
+
+- [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
+  Fixed some merge errors on the repositories for checkAuthorization method to verify returned headers and removed .dist/trigger.txt file
+
