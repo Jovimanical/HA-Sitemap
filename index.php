@@ -33,7 +33,7 @@ $app->get('/', function($request, $response, $args){
 	return $response->withRedirect("https://documenter.getpostman.com/view/408338/TzeTKVR8");
 });
 
-$app->group('/', function() use ($request) {
+$app->group('/', function() {
 	$this->map(
 		['GET', 'POST', 'PUT', 'DELETE'],
 		'{version}/{module}/{resource}/{action}[/{resourceId}]',
