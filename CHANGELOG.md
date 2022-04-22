@@ -102,4 +102,7 @@ Refactored bundled scripts
 
 - [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
   Fixed the code for checkAuthorization method to verify returned headers.
-  
+
+   ### Added
+- [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
+  Added duplicates of a few endpoints to test the new geometry implemetation.
