@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 require_once 'vendor/autoload.php';
 require_once 'src/PermissionGatewayMiddleware.php';
 
@@ -14,8 +14,12 @@ header('Access-Control-Allow-Headers: Content-Type, Cache-Control, X-Requested-W
 header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
 header('Access-Control-Allow-Origin: *');
 
+session_start();
+
 $permissionGatewayMiddleware = new PermissionGatewayMiddleware();
 $app = new \Slim\App($settings);
+
+
 
 $app->post('/{version}/login', function($request, $response, $args){
 	$data = $request->getParsedBody();
