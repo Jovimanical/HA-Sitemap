@@ -12,11 +12,11 @@ cd ~
         echo "Created kubo-core logs"
   fi
 
-  if ! [ -d /var/www/html/kubo-core/tmp/data ]; then
+  if ! [ -d /var/www/html/kubo-core/tmp ]; then
+        sudo mkdir /var/www/html/kubo-core/tmp
+        sudo chmod 775 /var/www/html/kubo-core/tmp
         sudo mkdir /var/www/html/kubo-core/tmp/data
-        sudo chmod 755 /var/www/html/kubo-core/tmp
-        sudo mkdir /var/www/html/kubo-core/tmp/data
-        sudo chmod 755 /var/www/html/kubo-core/tmp/data
+        sudo chmod 775 /var/www/html/kubo-core/tmp/data
         echo "Created kubo-core tmp/data"
   fi
 
