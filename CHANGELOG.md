@@ -111,3 +111,7 @@ Refactored bundled scripts
 - [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
   Added a new implementation for map data upload feature.
 
+ ### Added
+- [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
+  Added an instruction to the start up scripts to create tmp/data folders
+
