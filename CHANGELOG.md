@@ -119,3 +119,7 @@ Refactored bundled scripts
 ### Fixed
 - [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
   Fixed an undefined parameter bug with the map estate data upload method.
+
+  ### Added
+- [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
+  Added a start counter for unit upload map data
