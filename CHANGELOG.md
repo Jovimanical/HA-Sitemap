@@ -113,5 +113,5 @@ Refactored bundled scripts
 
  ### Added
 - [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
-  Added an instruction to the start up scripts to create tmp/data folders 
+  Added an instruction to the start up scripts to create tmp/data folders
 
