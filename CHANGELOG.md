@@ -48,4 +48,78 @@ Refactored bundled scripts
 - [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
   MINOR Fix scripts for install_dependencies
 - [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
-  MAJOR Fix for MSSQL Server connection error
+  MAJOR Fix for MSSQL Server connection error.
+
+
+  ### Changed
+
+- [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
+  Changed checkAuthorization method to verify returned headers and removed .dist/trigger.txt file
+
+   ### Fixed
+
+- [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
+  Fixed some merge errors on the repositories for checkAuthorization method to verify returned headers and removed .dist/trigger.txt file
+
+### Changed
+
+- [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
+  Changed the code for checkAuthorization method to verify returned headers.
+
+### Changed
+
+- [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
+  Changed the code to use slim framework header tools for checkAuthorization method to verify returned headers.
+### Changed
+
+- [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
+  Changed the code to use slim framework header and added global app variable tools for checkAuthorization method to verify returned headers.
+
+### Changed
+
+- [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
+  Changed the code to use slim framework header and instantiated app variable tools for checkAuthorization method to verify returned headers.
+
+### Changed
+
+- [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
+  Changed the code to use slim framework header and instantiated app variable considering slim 3 for checkAuthorization method to verify returned headers.
+
+### Changed
+
+- [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
+  Changed the code to use slim framework header and instantiated app variable considering slim 3 and added composer vendor link for checkAuthorization method to verify returned headers.
+
+### Changed
+
+- [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
+  Changed the code to use slim framework header and instantiated app variable considering slim 3 and removed composer vendor link for checkAuthorization method to verify returned headers.  
+
+  ### Fixed
+
+- [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
+  Fixed the code for checkAuthorization method to verify returned headers.
+
+   ### Added
+- [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
+  Added duplicates of a few endpoints to test the new geometry implementation.
+
+    ### Added
+- [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
+  Added a new implementation for map data upload feature.
+
+ ### Added
+- [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
+  Added an instruction to the start up scripts to create tmp/data folders
+
+### Fixed
+- [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
+  Fixed an undefined parameter bug with the map estate data upload method.
+
+  ### Added
+- [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
+  Added a start counter for unit upload map data.   
+
+  ### Added
+- [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
+  Added all the latest changes from april-sprints repo to the kubo plugins master branch..   
