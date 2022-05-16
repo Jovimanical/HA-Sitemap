@@ -2,7 +2,7 @@
   "adapter": "SQLServer",
   "server": "sytemap-production.cn9mopgi7fxg.us-west-2.rds.amazonaws.com,1433",
   "database": "kubo-db",
-  "username": "appUser",
-  "password": "?%8nt7a@x4U-6jGBvNQT%",
+  "username": "appUserId",
+  "password": "!e,Yq7Q+;AA8e5Z3",
   "showError": true
 }
