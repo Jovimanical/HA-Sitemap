@@ -35,6 +35,7 @@ sudo \cp -rf apacheconfigs/default-ssl.conf /etc/apache2/sites-available/
 sudo \cp -rf apacheconfigs/ssl-params.conf /etc/apache2/conf-available/
 
 sudo ln -s /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-enabled/default-ssl.conf
+sudo ln -s /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-enabled/000-default.conf
 
 sudo a2enmod ssl
 sudo a2enmod headers
@@ -59,7 +60,7 @@ fi
 
 
 # Install Global Composer Packages if any are given
-sudo composer install
+composer install
 
 sudo chown -R www-data:www-data /var/www/html
 sudo chmod -R 0777 /var/www/html
@@ -67,4 +68,4 @@ sudo chmod -R 0777 /var/www/html
 sudo systemctl restart apache2
 
 #Update composer with latest Development
-sudo composer update
+composer update
