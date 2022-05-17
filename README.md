@@ -12,6 +12,7 @@ cd into this project directory and run `pull-plugins && composer install`
 To update the plugins from the houseafrica/kubo-plugins  and other repos run `composer update`
 
 ## Deploy to development server
+
 Edit the changelog.md document following the convention written to update changes done
 Commit changes to the main branch to trigger the CI/CD for the development server
 
@@ -22,6 +23,7 @@ Commit changes to the main branch to trigger the CI/CD for the development serve
 `git push origin main`
 
 ## Deploy to production server
+
 Edit the changelog.md document following the convention written to update changes done
 Commit changes to the main branch to trigger the CI/CD for the development server
 
