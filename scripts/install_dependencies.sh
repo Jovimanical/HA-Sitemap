@@ -1,5 +1,5 @@
 #!/bin/bash
-#if ! [ -x "$(command -v apache2)" ]; then
+if ! [ -x "$(command -v apache2)" ]; then
 
   # Update Package Index
   sudo apt-get update && sudo apt-get upgrade -y
@@ -21,15 +21,6 @@
   sudo apt -y install wget unzip openssl git curl g++ make unixodbc-dev zip && rm -rf /var/lib/apt/lists/*
   # Install PHP
   sudo apt install -y php7.4 php7.4-zip php7.4-dev php-pear libapache2-mod-php7.4 php7.4-gmp php7.4-mysql php7.4-gd php7.4-xml php7.4-soap php7.4-mbstring php7.4-mysql php7.4-redis php7.4-curl php7.4-cli php7.4-zip php7.4-yaml php7.4-common php7.4-bcmath php7.4-json
-
-
-
-  # 7.4
-# sudo update-alternatives --set php /usr/bin/php7.4
-#  sudo update-alternatives --set phar /usr/bin/phar7.4
-#  sudo update-alternatives --set phar.phar /usr/bin/phar.phar7.4
-#  sudo update-alternatives --set phpize /usr/bin/phpize7.4
-#  sudo update-alternatives --set php-config /usr/bin/php-config7.4
 
   # Microsoft ODBC 17
   #sudo pecl uninstall -r sqlsrv
@@ -95,13 +86,13 @@
 
   echo "System script Exiting"
   exit 0
-#else
+else
   # I want to make sure that the directory is clean and has nothing left over from
   # previous deployments. The servers auto scale so the directory may or may not
   # exist.
-#  echo "System Checking Directories Exits"
-#  if [ -d /var/www/html/kubo-core ]; then
-#    sudo rm -rf /var/www/html/kubo-core/*
-#    echo "System Directory Cleared"
-#  fi
-#fi # install apache if not already installed
+  echo "System Checking Directories Exits"
+  if [ -d /var/www/html/kubo-core ]; then
+    sudo rm -rf /var/www/html/kubo-core/*
+    echo "System Directory Cleared"
+  fi
+fi # install apache if not already installed

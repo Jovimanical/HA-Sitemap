@@ -14,6 +14,9 @@ To update the plugins from the houseafrica/kubo-plugins  and other repos run `co
 ## Deploy to development server
 Edit the changelog.md document following the convention written to update changes done
 Commit changes to the main branch to trigger the CI/CD for the development server
+
+`git branch --set-upstream-to=origin/main`
+`git pull`
 `git add .`
 `git commit -m "developement server with XYZ updates or bugfix"`
 `git push origin main`
@@ -21,6 +24,9 @@ Commit changes to the main branch to trigger the CI/CD for the development serve
 ## Deploy to production server
 Edit the changelog.md document following the convention written to update changes done
 Commit changes to the main branch to trigger the CI/CD for the development server
+
+`git branch --set-upstream-to=origin/production-branch`
+`git pull`
 `git add .`
 `git commit -m "production server with XYZ updates or bugfix"`
 `git push origin production-branch`
