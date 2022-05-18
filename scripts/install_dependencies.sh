@@ -22,14 +22,18 @@ if ! [ -x "$(command -v apache2)" ]; then
   # Install PHP
   sudo apt install -y php7.4 php7.4-zip php7.4-dev php-pear libapache2-mod-php7.4 php7.4-gmp php7.4-mysql php7.4-gd php7.4-xml php7.4-soap php7.4-mbstring php7.4-mysql php7.4-redis php7.4-curl php7.4-cli php7.4-zip php7.4-yaml php7.4-common php7.4-bcmath php7.4-json
 
+  # Microsoft ODBC 17
+  #sudo pecl uninstall -r sqlsrv
+  #sudo pecl uninstall -r pdo_sqlsrv
+  #sudo pecl -d php_suffix=7.4 install sqlsrv
+  #sudo pecl -d php_suffix=7.4 install pdo_sqlsrv
   sudo pecl install sqlsrv && sudo pecl install pdo_sqlsrv
-  #updating Write permission
 
+  #Updating Write permission
   sudo chown -R ubuntu /etc/php/7.4/mods-available
 
   sudo printf "; priority=20\nextension=sqlsrv.so\n" > /etc/php/7.4/mods-available/sqlsrv.ini
   sudo printf "; priority=30\nextension=pdo_sqlsrv.so\n" > /etc/php/7.4/mods-available/pdo_sqlsrv.ini
-  #exit
 
   sudo chown -R root.root /etc/php/7.4/mods-available
 
