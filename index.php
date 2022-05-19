@@ -30,7 +30,7 @@ $app->post('/{version}/login', function($request, $response, $args){
 });
 
 $app->get('/', function($request, $response, $args){
-	return $response->withRedirect("https://documenter.getpostman.com/view/408338/TzeTKVR8");
+	return $response->withRedirect("https://houseafrica.io");
 });
 
 $app->group('/', function(){
