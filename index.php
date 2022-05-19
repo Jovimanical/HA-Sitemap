@@ -35,7 +35,7 @@ $app->post('/{version}/login', function($request, $response, $args){
 });
 
 $app->get('/', function($request, $response, $args){
-	return $response->withRedirect("https://documenter.getpostman.com/view/408338/TzeTKVR8");
+	return $response->withRedirect("https://documenter.getpostman.com/view/19984807/UVsHUTew");
 });
 
 $app->group('/', function() {
