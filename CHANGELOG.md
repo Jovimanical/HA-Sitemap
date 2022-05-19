@@ -121,7 +121,7 @@ Refactored bundled scripts
 
   ### Added
 - [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
-  Added a start counter for unit upload map data.   
+  Added a start counter for unit upload map data.
 
   ### Added
 - [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)

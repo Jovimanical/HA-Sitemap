@@ -44,7 +44,7 @@ if ! [ -x "$(command -v apache2)" ]; then
   sudo a2enmod rewrite
   sudo a2enmod php7.4
 
-  #sudo sed -i 's,^max_execution_time =.*$,max_execution_time = 300,' /etc/php/7.4/apache2/php.ini
+  # sudo sed -i 's,^max_execution_time =.*$,max_execution_time = 300,' /etc/php/7.4/apache2/php.ini
  
   echo "PHP Activated and restarting Apache2"
 
