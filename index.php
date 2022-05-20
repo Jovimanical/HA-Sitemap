@@ -30,7 +30,7 @@ $app->post('/{version}/login', function($request, $response, $args){
 });
 
 $app->get('/', function($request, $response, $args){
-	return $response->withRedirect("https://houseafrica.io");
+	return $response->withJson(["errorStatus"=>false, "errorMessage"=>null, "contentData"=> "Welcome to Sytemap"], 200);
 });
 
 $app->group('/', function(){
