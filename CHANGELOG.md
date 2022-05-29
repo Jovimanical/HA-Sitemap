@@ -126,3 +126,6 @@ Refactored bundled scripts
   ### Added
 - [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
   Added all the latest changes from april-sprints repo to the kubo plugins master branch...
+  ### Fixed
+- [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
+  Fixed a wrong returned values bug with the list-all-properties api.
