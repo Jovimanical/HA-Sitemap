@@ -129,3 +129,5 @@ Refactored bundled scripts
   ### Fixed
 - [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
   Fixed a wrong returned values bug with the list-all-properties api.
+
+
