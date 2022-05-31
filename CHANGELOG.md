@@ -136,4 +136,4 @@ Refactored bundled scripts
 
 ### Added
 - [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
-  Added two methods searchProperty and searchByLocation api endpoints...
+  Added two methods searchProperty and searchByLocation api endpoints.
