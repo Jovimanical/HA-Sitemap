@@ -134,4 +134,6 @@ Refactored bundled scripts
 - [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
   Fixed a bug on map data upload endpoints for double quotes.
 
-
+### Added
+- [HOUSEAFRICA-BACKEND-KUBO-CORE](http://tickets.projectname.com/browse/HOUSEAFRICA-BACKEND-KUBO-CORE)
+  Added two methods searchProperty and searchByLocation api endpoints...
